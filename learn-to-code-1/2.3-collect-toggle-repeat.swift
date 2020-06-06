@@ -1,0 +1,18 @@
+func oneGemOneSwitch() {
+    collectGem()
+    moveForward()
+    toggleSwitch()
+    moveForward()
+}
+moveForward()
+oneGemOneSwitch()
+turnLeft()
+moveForward()
+oneGemOneSwitch()
+moveForward()
+turnLeft()
+moveForward()
+oneGemOneSwitch()
+turnLeft()
+moveForward()
+oneGemOneSwitch()
