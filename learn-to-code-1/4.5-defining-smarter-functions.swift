@@ -3,9 +3,8 @@ func collectOrToggle() {
         collectGem()
     } else if isOnClosedSwitch {
         toggleSwitch()
-    }
-
-} 
+    } 
+}
 
 func moveFourSteps() {
     for i in 1 ... 4{
@@ -13,10 +12,11 @@ func moveFourSteps() {
         collectOrToggle()
     }
 }
+
 moveFourSteps()
 turnLeft()
 moveForward()
-moveFourSteps()
+moveForward()
 turnLeft()
 moveFourSteps()
 turnRight()
