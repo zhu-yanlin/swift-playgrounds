@@ -17,4 +17,3 @@ for i in  1 ... 4 {
     turnLeft()
     move(step: 2)
 }
-
