@@ -68,3 +68,31 @@ turnLeft()
 moveForward()
 turnLeft()
 solveLine()
+// Solution 3
+
+func moveToEnd() {
+    while !isBlocked {
+        moveForward()
+        if isOnGem {
+            collectGem()
+        } else if isOnClosedSwitch {
+            toggleSwitch()
+        }
+    }
+}
+
+func turnAround() {
+    turnLeft()
+    turnLeft()
+
+}
+
+for i in 1 ... 2 {
+    moveToEnd()
+    turnAround()
+    moveToEnd()
+    turnLeft()
+    moveForward()
+    turnLeft()
+}
+moveToEnd()
