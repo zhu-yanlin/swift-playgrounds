@@ -1,3 +1,4 @@
+// Solution 1
 func turnAround() {
     for i in 1 ... 2 {
         turnRight()
@@ -24,3 +25,29 @@ while !isOnClosedSwitch {
     moveAroundWall()
 }
 toggleSwitch()  
+
+// Solution 2
+func turnAround() {
+    for i in 1 ... 2 {
+        turnRight()
+    }
+}
+
+func moveAroundWall() {
+    if isBlockedRight {
+        moveForward()
+    } else {
+        turnRight()
+        moveForward()
+    }
+}
+
+while !isOnClosedSwitch {
+    moveAroundWall()
+    if isOnGem {
+        collectGem()
+        turnAround()
+    }
+}
+
+toggleSwitch()
