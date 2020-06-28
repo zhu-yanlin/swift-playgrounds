@@ -51,3 +51,27 @@ while !isOnClosedSwitch {
 }
 
 toggleSwitch()
+
+// Solution 3
+func turnAround() {
+    for i in 1 ... 2 {
+        turnRight()
+    }
+}
+
+func moveAroundWall() {
+    if !isBlockedRight {
+        turnRight()
+    }
+    moveForward()
+}
+
+while !isOnClosedSwitch {
+    moveAroundWall()
+    if isOnGem {
+        collectGem()
+        turnAround()
+    }
+}
+
+toggleSwitch() 
